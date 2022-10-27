@@ -1,0 +1,59 @@
+As we've seen, Java 8
+introduced many new features, particularly ones we've
+looked at related to interfaces such as
+functional interfaces, lambdas, the default
+and static methods. Java 8 also introduced
+many new interfaces and methods taking advantage
+of all those new features. You could even argue in
+more than one case that the reason the new feature
+exists is to support the new interfaces
+and methods that are designed to make
+it easier to do things that are either very
+common like looping or even more complex things
+like data pipelines. For example, the
+Iterable interface, the new default method forEach, which accepts a parameter
+of the Consumer. Consumer is a
+functional interface. Unless you look, you won't
+even know what the name of the method is if we
+implement it using lambdas. Because all of our
+Collection classes implement Collection and
+it extends Iterable, they all got the forEach
+method for free. Map wasn't so lucky because
+it doesn't implement either Iterable or extend the Collection to
+get it indirectly. Instead, they directly provided
+their own forEach method, which we looked at earlier. We looked at the reason why earlier forEach uses a Consumer, taking a single parameter and Maps forEach
+takes a BiConsumer, taking the key and the value. In a little bit more detail, the forEach method off of
+Iterable invokes a Consumer. The required method on the
+Consumer interface is accept, returning a void and taking
+whatever that type is. There's another method, a default method
+called the andThen, which can be used to compose
+chains of consumers to start produce a processing
+pipeline, a single forEach. Look at this. We have a Consumer typed for
+vehicle called go25, and that is assigned a
+lambda implementation. Given a vehicle,
+that's the parameter, we're going to set
+the speed to 25. We're not invoking this lambda, we're literally
+assigning that lambda to the go25 reference. We get the treat code
+as if it's an object. We're then going to pass
+that to the forEach. That's what we've been doing when we've been working with lambdas. But here, we're doing an explicit assignment to a reference, and the reason for
+that is syntactic. Given the go25 reference, we can then invoke
+the.andThen off of it. This is essentially saying, as we loop through every vehicle, set that vehicle speed to 25 and then print out that vehicle. We can in fact chain additional
+andThens, not just one. After the andThen, we could have another.andThen and
+another.andThen and build up a pipeline. This led to the development
+of Java 8 streams as a new way to do functional
+programming in Java. Now, they are a lot of fun. They can be very exciting, but they're also very, very new. They allow us to create
+data processing pipelines. We can even do parallel processing
+pipelines without having to do our own threading. We can simply ask for
+a parallel pipe and it will create multiple
+pipelines and proportions, partitions of each data
+down those pipelines, taking advantage
+of the many cores that we're starting to
+have in our computers. All of our collection classes
+can be turned into streams. There's a method on the
+collection class to turn it into a stream and then you
+can attach your pipeline, a more sophisticated version of the simple stuff we've
+been doing with forEach. We're going to revisit Java 8 streams briefly
+in our I/O unit. But for now, we're
+providing you with a lot of supplemental readings if you want to explore this
+new capability, this new Java 8 streams. Personally, I urge you to do so. They can be very powerful as you'll see
+in our I/O example.

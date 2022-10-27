@@ -1,0 +1,38 @@
+The Iterator interface, which
+was introduced in Java 1.2, provides the core methods
+for iterating over collections or anything which chooses to provide an iterator. The two key methods on
+Iterator are next and hasNext. There's also remove and there's a new method on
+Iterator from Java 8, which is a forEachRemaining, so that if you're using an iterator and
+then you just want to switch to using forEach on whatever's left
+from the iterator, you can do that too. But these are the
+two we're going to talk about because we're talking about what if you wanted
+to use Iterator directly? HasNext lets you know whether
+there is anything to get, and next would get
+you the next one. Typically, if
+something is iterable, it has a method declared on the iterable interface
+called the Iterator, which will provide an
+iterator of those elements. This would be the explicit use. It really isn't anachronism
+in modern Java, for the most part. You'd have to have a
+very specific use case, why you're still using
+an iterator directly. But here would be the case. We have an iterator
+while with hasNext, get the next and do something. In modern Java, we're either
+going to use the enhanced for loop or the Java
+8 forEach method. We have a reading which will cover the various
+ways in which you could iterate over
+something that's iterable. There is a potential problem
+working with iterators. What happens if the contents of the iterable changes after
+you've grabbed the iterator. Well, depending on
+the implementation, your iterator may have an issue going through that collection. In which case, Java will
+generate a run-time error. We will talk about
+exception handling later, but this is a possibility. Now, that begs the question, why is the contents changing? Am I in a multithreaded
+environment? What else is going on? Why is that changing? The fact that this is
+a potential problem really surfaces the question of, what is making this
+potential problem an actual problem in this code? Am I using the right programming constructs to solve the
+problem that I need to solve, or have I created a
+different problem? So you'd have to look
+at it in your code. What is the right way to accomplish whatever it
+is you're trying to do? Why are your collections changing outside of the code in which you're currently going
+through the collection? They talk about the contents
+of the collection changing, remember the iterator
+itself has a remove method. If you do the remove
+through the Iterator, this problem does not occur. So food for thought.

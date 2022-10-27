@@ -1,0 +1,51 @@
+A List is a collection
+where we can preserve the order of elements. Lists are basically like
+arrays in that sense, except that we use methods
+instead of square brackets. Like with arrays, we
+can assign elements at a specific position and we can retrieve elements
+from that position. In fact, one of the
+implementations of List is the ArrayList, which internally is
+simply using an array, and fortunately for us managing its growth so that we
+don't have to worry about adding more
+elements than we didn't initially allocated
+the array size. So why do we then have
+LinkedList if we have ArrayList? Well, consider what if
+I want to then insert, not assign at a
+particular position, but insert into a
+particular position that's in the middle of data
+I've already added. Well, in the case of an array,
+ArrayList or otherwise, what we have to do is
+shift everything over to be able to open up a hole
+and put in the new element, and that is computationally expensive to have to
+shift over that memory. Likewise, if I want to delete an element at a
+particular position, I have to then shift over all of the other data
+to fill the gap. Again, computationally expensive. But ArrayLists, from a storage perspective, are compact and in terms of
+simply appending to the end or removing from the
+end also efficient. LinkedLists are better
+structures when we want to do inserting into the middle or removing
+from the middle. They only require a
+little bit of change. They are far more performant, far more efficient in that case. So ArrayList versus LinkedList, depending on what types of operations you
+expect to be doing, particularly in terms
+of inserting or removing from the
+middle of the list. What about Vector and Stack? Vector and Stack are the original list-like structures that we had from Java 1. Vector and Stack
+have been rejiggered to actually be lists. Vector in fact is a type of list, and Stack is a subclass of Vector adding the push and
+pop type methods. As discussed in generics, there's actually
+another class Deque, which is the recommended
+replacement for Stack. Here are some of
+the things on list. We already have the regular
+things like adding. Well, now we have
+add at an index, get at an index, set, in other words replace, at an index, addAll
+starting at an index. What is the index of
+this particular value? That's going to get
+you the first one. So what if you want the last
+one from the end first, what's the last index of
+that particular value? Because lists are not sets, they don't exclude duplicates. ListIterator. Well, we've talked
+about iterator. A ListIterator is
+just an iterator that gives us a little
+extra behavior. With a regular iterator, we can go from the front and
+go all the way at the back. But with a ListIterator,
+we can back up. A ListIterator will let
+us go in both directions. Not all collection types
+would support that. Lists do, and that's why
+it is a ListIterator. That is a look briefly
+at the List interface.

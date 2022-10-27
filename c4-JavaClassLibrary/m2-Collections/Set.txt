@@ -1,0 +1,29 @@
+A set is a collection that does
+not allow duplicate elements. There's another aspect of set
+when we add things into a set. Because they're looking
+to eliminate duplicates, they usually use techniques
+such as hashing or organizing it into a sorted tree,
+and therefore there's no guarantee we'll get them back out in the order
+in which we had added them. Even when we talk about sorting. We're talking about sorting. By value not by the order
+in which they were added. The implementations of set reflect us. We've got hash set link test set and
+trees set. A tree set also implements sorted set, allowing us to organize
+the way the elements are in terms of alphabetical or other. So when do you want to use the set? Well, for one thing, if you don't care the
+order in which you get things back out, at least relative to the order
+in which you put them in. Clearly with sorted sets,
+we can get them out in a sorted order. Sets may also be. Faster depending on what
+it is we're trying to do, certainly in terms of
+retrieving something by value. Because of the way sets work, it's
+often easier quicker to find something. On the other hand, that's not
+necessarily the most common thing to do. And if you're just wanting
+to loop over something, it's going to be hard to beat
+the performance, for example, of an array list. Or even a link list. So it depends on what
+it is you need to do. Is how we choose between a list, a set and in terms of key to access maps. Here's one example of the Hash Set. Once again, over here on the left
+hand side, this should simply be set. Have a car or
+since all we're doing is adding it could even be collection of
+car is a new hash set. And, again,
+we would use the diamond over here. We don't need to repeat
+ourselves with the car. And then just go ahead and
+add a new SUV and add a new sports car. The hash set as with all
+collections does provide us with an object implementing
+the Iterator interface. And we'll take a look at that before we
+continue to look at other collections.

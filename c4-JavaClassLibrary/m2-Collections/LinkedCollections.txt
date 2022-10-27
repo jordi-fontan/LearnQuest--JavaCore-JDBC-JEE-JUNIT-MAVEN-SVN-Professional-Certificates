@@ -1,0 +1,28 @@
+There's a special set of
+collections implementations, the linked collections, and
+we saw LinkedList earlier. The other two that
+we'll look at here are LinkedHashSet and there's
+also the LinkedHashMap. You would use these when
+you want to be able to iterate over their contents
+in a defined order. Generally speaking, the order
+in which they were added, which otherwise known
+as insertion order. We talked about LinkedList
+itself earlier. Its behavior should
+come as no surprise, and the aspect that we talked
+about with LinkedList was ArrayList lets us deal with
+insertion order as well. What LinkedList gave us
+was efficiency for dealing with insertions and deletions anywhere other than the end. But the other two do
+something special because they not only hashed their elements for rapid access, but they also maintain the
+LinkedList internally so that you can not
+only access things quickly with a key in the
+case of LinkedHashMap, but you can also iterate over
+them in the defined order, and that's usually
+insertion order so that you can iterate over them in the order in which
+they were added. But LinkedHashMap optionally
+allows you to say, "No, instead of insertion order, I want to know about
+access order because that allows us to do things like implement least
+recently used maps." That's just a quick look
+at linked collections. They're not something
+you use every day, perhaps except for LinkedList
+if you have that need. But when you need them, they are really
+nice to know about.
