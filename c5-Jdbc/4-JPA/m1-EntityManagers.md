@@ -72,5 +72,12 @@
 ![imagen](https://user-images.githubusercontent.com/63612112/209249289-43cb51ca-586f-41b6-a05d-b734002491ec.png)
 
 
+### Readings
+What is JPA
+https://www.javatpoint.com/jpa-vs-hibernate
+Why use JPA?
+https://www.sitepoint.com/5-reasons-to-use-jpa-hibernate/
 
+The persistence.xml file
+https://thorben-janssen.com/jpa-persistence-xml/
 
