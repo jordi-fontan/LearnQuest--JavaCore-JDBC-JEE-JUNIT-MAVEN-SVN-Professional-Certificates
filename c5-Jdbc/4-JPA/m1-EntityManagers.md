@@ -24,8 +24,7 @@
 ![imagen](https://user-images.githubusercontent.com/63612112/209246587-a9b8cdf4-516a-4901-bebf-2351a7667b4d.png)
 ![imagen](https://user-images.githubusercontent.com/63612112/209247074-119e6bc7-d6a8-4d1e-b1a2-21d076630b4d.png)
 
-### 9. Database  Setup
- ![imagen](https://user-images.githubusercontent.com/63612112/209247460-e80b08c0-4b68-4502-b589-16ca7ecbf93f.png)
+
  
  ### 7. ENtity Manager Interactions - Transactions
 ![imagen](https://user-images.githubusercontent.com/63612112/209246975-050a5d26-8731-447c-88a6-97de0c0e4685.png)
@@ -34,10 +33,44 @@
 ![imagen](https://user-images.githubusercontent.com/63612112/209247555-b5e1bfd4-3f0a-48e0-807e-44409d82a2ee.png)
 
 ### 9. Database Setup
-![Uploading imagen.png…]()
+![imagen](https://user-images.githubusercontent.com/63612112/209247739-c0e952bf-a189-4162-93f9-b697b328152b.png)
 
 ### 10. Start Derby Server
 
-![Uploading imagen.png…]()
+![imagen](https://user-images.githubusercontent.com/63612112/209247752-4fe9ff57-0684-4144-b310-cf177ee10e04.png)
+
+
+###. 11. Open eclipse database developer prespective
+
+![imagen](https://user-images.githubusercontent.com/63612112/209247952-454f9531-3519-4a18-84a7-3555fe27cb74.png)
+
+### 12. Create New Derby Connection
+
+![imagen](https://user-images.githubusercontent.com/63612112/209248031-7cbb7477-fcfe-4fa5-8fc8-a9ff68e0833b.png)
+
+### 13. Test Connection and Browse Tables
+
+![imagen](https://user-images.githubusercontent.com/63612112/209248258-5cb54648-5099-4e9e-9cc1-c75cd9a51d0d.png)
+
+### 14. SetMavenPreferences (allow maven to get dependencies through a proxy)
+
+![imagen](https://user-images.githubusercontent.com/63612112/209248456-45b72954-3cdc-4de3-82d9-63cf37da47f2.png)
+
+### 15 Load Project 01/ Have a look at DB creation script
+
+![imagen](https://user-images.githubusercontent.com/63612112/209248710-1ccd98cb-ee79-4dc5-95ea-59a8aae6f1cb.png)
+
+### 16 Run Script
+![imagen](https://user-images.githubusercontent.com/63612112/209248883-5f3a972c-cc8e-4da5-b003-f9b2628b37d1.png)
+
+### 17 Employee Query/Execute it /(right click)
+![imagen](https://user-images.githubusercontent.com/63612112/209249025-62ccdd04-cd36-41c7-a534-0799f13a2d22.png)
+
+### 18 Lab
+
+![imagen](https://user-images.githubusercontent.com/63612112/209249234-99dc2e6c-8cd9-4f81-8d16-56dcd23a2d6f.png)
+![imagen](https://user-images.githubusercontent.com/63612112/209249289-43cb51ca-586f-41b6-a05d-b734002491ec.png)
+
+
 
 
