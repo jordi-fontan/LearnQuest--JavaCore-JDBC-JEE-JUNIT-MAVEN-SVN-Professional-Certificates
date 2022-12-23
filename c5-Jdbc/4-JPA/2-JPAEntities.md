@@ -64,3 +64,12 @@
 ![imagen](https://user-images.githubusercontent.com/63612112/209256305-adf27c4f-f2df-4445-9b13-61aa1f564440.png)
 ![imagen](https://user-images.githubusercontent.com/63612112/209256368-39477765-d65d-40bf-953f-aad4691693e7.png)
 
+### 15. CRUD Operations/ Update
+![imagen](https://user-images.githubusercontent.com/63612112/209256673-6810c1e9-71d6-47e7-aa7b-67b4fcde68cc.png)
+![imagen](https://user-images.githubusercontent.com/63612112/209256716-7ac4bd38-88e0-4b82-a586-d593419d9bcd.png)
+### 16. CRUD Operations/ Update
+![imagen](https://user-images.githubusercontent.com/63612112/209256851-c375e270-10c0-4795-aeb6-0d64da90c0db.png)
+![imagen](https://user-images.githubusercontent.com/63612112/209256936-b19f4db1-f8bb-4b56-be29-df6d61003bce.png)
+### 16. CRUD Operations/Detach
+![imagen](https://user-images.githubusercontent.com/63612112/209257089-1e10cc78-fc08-412c-9262-f146be6e0389.png)
+
