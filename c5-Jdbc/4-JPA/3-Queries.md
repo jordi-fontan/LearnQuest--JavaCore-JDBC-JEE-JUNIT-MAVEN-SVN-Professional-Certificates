@@ -55,3 +55,8 @@
 
 ### 13. Attribute Override
 ![imagen](https://user-images.githubusercontent.com/63612112/209263008-ab55b0cc-fc7b-42a7-8680-53c5cc33bd4b.png)
+
+### 14. Compound Primary Keys
+![imagen](https://user-images.githubusercontent.com/63612112/209263734-aa57efff-e46a-4a6e-842f-57f1e31ab0ed.png)
+
+![imagen](https://user-images.githubusercontent.com/63612112/209263942-29047c90-8ee1-4d8e-a456-1ac6b3f7a8cd.png)
