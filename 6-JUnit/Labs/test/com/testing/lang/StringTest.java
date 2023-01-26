@@ -2,6 +2,8 @@ package com.testing.lang;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.function.Supplier;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -38,8 +40,14 @@ class StringTest {
 	@Test
 	final void testSubstring() {
 		System.out.println("Testing substring " + myString);
-		//assertTrue("1234"==myString.substring(0,4));
-		assertFalse("1235"==myString.substring(0,4));
+		System.out.println("Testing substring " + myString.substring(0,4));
+		
+		assertEquals("1234",myString.substring(0,4));
+		assertNotEquals("1235",myString.substring(0,4));
+		Supplier<String> messageSupplier  = () -> "Substring 0,4 test failed";
+		//make it fail to check supplier
+		System.out.println("Testing substring message " + messageSupplier.get());
+		assertNotEquals("5", myString.substring(0,4), messageSupplier);
 		
 	}
 
