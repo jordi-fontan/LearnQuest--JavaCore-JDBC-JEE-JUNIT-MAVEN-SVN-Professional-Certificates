@@ -1,6 +1,10 @@
 package com.testing.lang;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.function.Supplier;
 
@@ -14,7 +18,9 @@ import org.junit.jupiter.api.Test;
 /*
  *  Class showing the basics of JUnit
  *  Also includes @Displayname and Supplier func Interface
+ *  Version 2: Adds Grouped Assertions
  */
+
 @DisplayName("Testing Java Strings!!")
 class StringTest {
 	String myString;
@@ -69,6 +75,18 @@ class StringTest {
 		assertNotEquals("5", myString.substring(0,4), messageSupplier);
 		
 	}
+	
+	@Test
+	@DisplayName("Grouped Assertion")
+	void groupedAssertion() {
+		
+		// Include Both test in a grouped Assertion and make the first fail
+		assertAll(" Both String Methods",
+				()->assertEquals("0234",(myString.substring(0,4))),
+				()->assertEquals(7,myString.length()));
+		
+	}
+	
 
 	
 }
