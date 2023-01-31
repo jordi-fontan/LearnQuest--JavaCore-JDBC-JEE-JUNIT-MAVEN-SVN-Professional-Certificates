@@ -80,7 +80,8 @@ class StringTest {
 	@DisplayName("Grouped Assertion")
 	void groupedAssertion() {
 		
-		// Include Both test in a grouped Assertion and make the first fail
+		// Include Both test in a grouped Assertion and make both fails
+		// Checking that both tests were executed
 		assertAll(" Both String Methods",
 				()->assertEquals("0234",(myString.substring(0,4))),
 				()->assertEquals(7,myString.length()));
