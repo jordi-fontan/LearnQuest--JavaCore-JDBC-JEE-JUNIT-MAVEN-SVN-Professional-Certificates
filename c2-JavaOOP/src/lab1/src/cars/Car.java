@@ -2,13 +2,19 @@ package cars;
 import java.time.LocalDate;
 import java.time.Period;
 
-
 public class Car {
     private String name;
     private int speed;
     private boolean engineStatus;
     private LocalDate manufactured;
+    private int gasoline;
     
+    public int getGasoline() {
+        return gasoline;
+    }
+    public void setGasoline(int gasoline) {
+        this.gasoline = gasoline;
+    }
     public LocalDate getManufactured() {
         return manufactured;
     }
@@ -25,7 +31,11 @@ public class Car {
         return speed;
     }
     public void setSpeed(int speed) {
-        this.speed = speed;
+        int maximumSpeed=65;
+       
+        
+        this.speed = (speed<=maximumSpeed) ?  speed :  maximumSpeed;
+
     }
     public boolean isEngineStatus() {
         return engineStatus;
@@ -33,6 +43,7 @@ public class Car {
     public void setEngineStatus(boolean engineStatus) {
         this.engineStatus = engineStatus;
     }
+ 
     
     
     public int getAge(){
