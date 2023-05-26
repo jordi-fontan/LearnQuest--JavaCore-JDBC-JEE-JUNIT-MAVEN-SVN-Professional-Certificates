@@ -1,6 +1,7 @@
 package cars;
 import java.time.LocalDate;
 import java.time.Period;
+import static java.lang.Math.min;
 
 public class Car {
     private String name;
@@ -71,8 +72,8 @@ public class Car {
     public void setSpeed(int speed) {
         int maximumSpeed = 65;
 
-        this.speed = (speed <= maximumSpeed) ? speed : maximumSpeed;
-
+       // this.speed = (speed <= maximumSpeed) ? speed : maximumSpeed;
+          this.speed=min(speed,maximumSpeed);  
     }
 
     public boolean isEngineStatus() {
