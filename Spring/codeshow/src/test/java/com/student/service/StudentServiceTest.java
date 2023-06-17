@@ -44,7 +44,9 @@ public class StudentServiceTest {
 	}
 	@Test
 	void tesGetAll() {
-		 
+		 service.getAllStudents().forEach(p->{System.out.printf(" %-10s %-10s %n",
+				 p.getFirstName(),p.getSurname());
+				 });
 	}
 
 
