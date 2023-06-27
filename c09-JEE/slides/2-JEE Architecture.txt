@@ -1,0 +1,103 @@
+N-Tier architecture and patterns. Now, keep in mind as we examine these
+topics that their entire volumes written on them. But we're going to explain the design and
+purpose of n-Tier architecture in the context of JEE,
+will describe the basic idea of a pattern. And explain the fundamentals
+of model-view-controller, which will set us up for
+success in an upcoming lab. Now, at this point, we're going to prepare
+ourselves by providing a little foundation for writing JEE applications,
+which will be doing very soon. And we need to understand
+some of the design and forces at work in the architecture
+in order to do that. So we're going to delve a little bit
+deeper into the JEE architecture, and then examine one particular pattern
+called model-view-controller, and some of the benefits of this,
+and other patterns. The first thing we need to understand
+is what's meant by n-Tier architecture? We're going to break that down into
+three pillars, so the first part is the recommended configuration of
+an enterprise scale JEE application, is partitioning the functionality
+into layers or tiers. So we want to break these pieces
+up into layers or tiers, and then the natural question is,
+well, why would I want to do that? Well, a tier is a basis for partitioning
+that localizes logical concerns and allows each piece of the application
+to be constructed, validated, and maintained independently. So what we're really saying is, it's
+easier from a design and a maintenance, and understanding perspective for
+future developers and scalability. So there's just a lot of benefits
+that come out of breaking things into the tiers. So a classic three-tier architectural
+pattern that you'll see is the presentations tier,
+the controller or mediator tiers, the domain or model tier,
+it's sometimes called so. We tend to break these into three tiers,
+or sometimes even those tiers can be broken up more, but
+those are a little beyond our scope. So for right now, if you can just
+remember presentation and controller, and the model, you'll see where we're
+going with it pretty quickly. Now to do the presentation tier,
+we're going to use HTML, and that's assumed as
+a prerequisite this course. But we did want to just touch on it
+briefly to make sure that everyone knows what to expect. While you're not going to be required
+to write a lot of HTML in this class, you are going to be required to write
+some, and especially be able to read it. So it's a simple text-based language,
+the syntax is based on tags. There are a number of tutorials
+in the course era family that you can check out if you
+want to learn more about HTML. And all we're doing here is just reminding
+you that we'll be using HTML for our presentation or view. So a Web page is an HTML document,
+which can reside on your local machine or on a Web server. And a Web browser renders that is, HTML, the tags tell the browser how
+the content should be displayed. So most of this again, you should already
+know, if not, you might want to take time to look at a quick tutorial, so that you
+don't get lost when we get into the code. And you can focus on the server for
+this particular lesson. The other thing we're going to need to
+know in addition to the view is a little bit about a pattern called
+model-view-controller. And I want to back up just a moment,
+and talk about patterns in general. So a pattern represents
+a design guideline for common problems in a platform and
+language independent solution. One way to think of it,
+it's a solution to a problem in a context. So if you're a carpenter, you might
+use a particular dovetail joint or other pattern known to you as a carpenter,
+to help you join pieces of wood together. Well, it turns out we do the same
+thing in software development. When we have architectural designs, we solve many of the same
+problems over and over. How is the database is going to talk
+to ourselves, to our application? How's the application going to talk to
+a user, or be accessible to a user? Even inside the code, how can I separate
+instantiation from implementation, while I can use something
+called a factory pattern? So people have solved these problems, and
+by learning the patterns, we can greatly expedite how quickly we can both learn
+new API's and solve our own problems. And the common one that you'll see
+from an architectural standpoint and JEE is called model-view-controller. And you can see from our diagram here,
+that by model-view-controller, we're simply breaking this into tiers or
+layers. So take a look at the view, so a user may
+see a view, and then act on that view, and that would send a message
+over to the controller layer, who would then say,
+I know what to do here. I know that you're trying to look for
+a particular record from my database, and I have logic built in my model
+layer that can go and do that. So this might be where a lot of your
+business logic code is in your model. And then it would reach out to a database,
+not shown here or a data resource of some
+kind not shown here. And then return that data, and
+then update the view with that data. So you'll see that
+primarily in the JEE world, most of the applications you run into,
+we'll use this monolithic approach, right? So we'll have a view presentation,
+it will go through a controller, but it will have its business
+logic stored on a tier, and then it will have data
+access stored on a tier. And it's a very common sort of
+approach to solving the problem. We also wanted to mention that,
+these days microservices are very popular, and they scale very well, and
+there's some great reasons to use them. So you may run into those as well,
+and you can do microservices with JEE, you'll just need a few extra
+things as you expand and grow it. But you'll see the difference here, right? So microservices is a standalone
+application, it has its own database, each service does. And then you can orchestrate, and choreograph these services together
+to do what the application needs. Versus in our typical JEE application,
+what we did was create a view, for instance, a browser, it goes through
+the controller toxic, some business logic. It goes out to a perhaps
+centralized database, and brings back the data,
+does any formatting or logic on that data we need to,
+and presents it back to the view. Another pattern that you'll run into,
+when you're doing JEE or related technologies, is called
+a front controller design pattern. Now, the good news is you don't
+have to understand this pattern. Again, this is just one that will
+help you learn more quickly. So this is happening behind the scenes,
+often whether you know about it or not. So a client might invoke or call a method on a server that
+serves as a front controller. And that would delegate off to
+an application controller, which would run a command object of some kind to
+go do some business logic and return. And once it returns,
+it would dispatch it to the view. And these are very useful to understand,
+even though you don't have to. If you were learning, for
+instance, the spring framework for Java enterprise development, you would
+find that it uses a front controller, and understanding that can
+be quite beneficial.

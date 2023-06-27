@@ -1,0 +1,89 @@
+In this lesson we're
+going to take a look at what is Java EE. We'll explain JEE and its benefits in Enterprise
+Java development. We'll describe how JEE fits all of the
+following definition. It's a specification, it's a set of APIs it's a
+standard, it's a platform. Then we'll also understand by
+the end of this lesson what the benefits and purpose of the Container architecture
+is all about. What is Java EE? One perspective is that
+it's a specification, things like servlet
+and Java server pages are part of the Java
+EE specification, and we'll be focusing a lot on servlets in this
+particular course. It describes web application
+components and deployment, how are we going to not only
+create these components, but how are we going
+to deploy them and be able to have our
+clients access them? The Enterprise JavaBean API as part of the Java
+EE specification. There's an API for almost
+everything you need to do. Think of it this way, you just met someone who's never used to smartphone
+in their life, and you're going to teach
+them a little bit about it, and after they get the hang
+of it they begin to say, "Boy it would be
+really nice if I could look at my bank balance." You would smile and say, "Hey, there's an app for that." I'd really like to
+see the bus schedule, there's an app for that. I really like to book
+my airplane ticket, there's an app for
+that and so on. Well, I want you to think
+of JEE as the same thing. If you're in the
+middle of developing a Java application, and you're like, " I need
+to talk to a database." There's an API for that. " I need to do some
+message handling." There's an API for
+that and so on. It really provides a
+standard for developing and deploying enterprise
+applications. We can handle things like
+services being distributed, transactions, security all in one place
+and one consistent way. Here's an overview of the
+JEE platform architecture. You certainly don't
+have to memorize all this or know all of it, it's just to give you a
+sense of what's available. What you'll see if you
+take a look at this, there's a lot of layers here, so there's the Core Java stuff that you're probably
+somewhat familiar with, but we can also do web services. We have availability to do GUI things with things
+like Swing or JavaFX. We have the ability to talk
+to databases through JDBC, there's an API for that. We have the ability to do remote method
+invocation with RMI, there's an API for
+that, and so on. All of these things that we look at you'll just see
+over and over, they're just built-in
+libraries that will help you build your
+applications and again focus on building
+your business app and not having to worry about every single time I
+do an application, how am I going to handle
+talking to a database? How am I going to handle working with my
+network and so on? You will also hear
+people refer to Java Enterprise Edition as
+J2EE and sometimes JEE. A little bit of history on that. J2EE came about when Java 2 was released and the enterprise edition
+was really released. It was a significant change
+for the Java architecture. We all called it J2EE and then Java 3 and 4 came along and
+they were helpful changes, but not hugely significant, so everyone kept saying J2EE. When Java 5 was
+released there was another very significant set of changes made at the
+Enterprise Edition level, so the name was changed
+to Java EE or JEE. If you're going to do JEE, you're going to need
+to learn a little bit about Container-Managed Systems. A Container is simply
+a logical abstraction. It's a run time environment for specific types of components
+that we're going to use, we're going to take
+a look at them. It'll allow you to access specific resources and
+services inside the Container. In the Web Container that we're going to look
+at a lot in this course, we'll be able to access
+servlets and JSPs. Also is a great
+centralized place for infrastructure type things like security transactions and so on. You just get the
+opportunity to manage the lifecycle of deployed
+components on the server side, and again we're going to look at servlet heavily in this course, and you'll see how the Container managed those lifecycles and let us interact as necessary. Container server relationship. This is just a picture
+to show you and give you a concept of what's going
+on behind the scenes. Our web Container again that we're going to focus a lot on in this course has servlets
+and JSPs within it, and we're going to see
+how we interact with it, how the lifecycle is there
+for us to work with, and how much help it provides. Additionally in most JEE servers there are EGB containers, and that's covered in
+a different course, but the concept is
+exactly the same. It's just some things are managed by the Container here to be helpful and let you focus on the business application
+that you need to write. You'll also notice that the database is sitting over here, often that's on another tier or distributed across
+multiple servers, and then you'll see
+that we have our client on the left-hand side and often that's a browser but it could be just a client server app or
+it could be a mobile app, anything at all can reach out and talk to
+these Containers. Again probably three layers, a three-tier architecture
+from the client, the server, and the
+data repository. This is another view of it, but a little bit dated
+but it can give you the concept of a web
+Container living in the server side in a JASP in a server that are available
+in that Container. EJBs are available
+in their Container. We have the ability
+to do things like Java messaging with JMS, or JAX-RPC remote
+procedure calls, web services are built in. A lot of that logic and library help are available to us through APIs that
+we can simply use, and that's the real
+benefit of JEE.

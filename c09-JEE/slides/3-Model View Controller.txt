@@ -1,0 +1,108 @@
+Let's take a look at model-view-controller in
+a little more detail. At the end of this lesson you
+should be able to further understand the benefits of model-view-controller
+and why we use it, gained some very practical
+knowledge about how MVC is implemented in JEE and then understand the typical
+components used in each layer of the model-view-controller
+especially in a Java Enterprise
+Edition application. Now let's take a look at model-view-controller
+in a bit more detail. In this lesson we're going
+to examine each layer of the MVC and really talk
+about its purpose, its typical makeup and some of the forces at work when you're
+implementing this pattern. What's our motivation
+for using MVC? Well we get increased
+flexibility and creating distributed multi-tier
+applications and as you can see this is our textbook definition and the model view and
+controller components are separated by design they can be separated physically
+that's great because each of them can be maintained and
+scaled differently. Each of them can be located on a different tier which will greatly help with that and a lot of different variations
+can be employed. From a practical
+standpoint I find that this really helped me when I was learning
+model-view-controller, so you can see here that we have a view on the front end
+and of course then we have our controller
+layer coming in and then often Servlets will play the controller layer
+you're going to find out. Then we have our backend logic and things like EJBs and
+talking to databases, we could even have more
+code on the web container. But what's the point why
+do I care about this? Well the reason I
+care is simply this. Let's say our application
+we build a web application and it's fantastic,
+everybody's happy, the customer is
+happy, you're happy, your boss is happy, and things are just fantastic. Then business changes
+and these things called cell phones come along and your boss or customer
+come to you and say, "Oh we love your application but can you make it
+work on our phone?" Now think for a moment
+what just changed, did the way that you do your
+business logic and calculate your sales or
+whatever you might be doing in that application
+did that change? No, did the way you store the data in the
+database changed? No, what changed, the way I present
+data to the user so I could add another view
+another client here as the view talk to my web container and I don't have to change
+all that logic, I don't have to dig through
+all code where I've mixed view and business
+logic controller logic, I can just simply rip
+the face off of this and put on a new one and my
+application works just fine. That's one of the
+big benefits of MVC. Specifically looking
+at Servlets and JSPs, JSPs are Java server pages and we'll look at them in
+detail in another course, we'll mention them
+here several times, but really we're going to use HTML for our front
+end in this course and focus most of our
+code on Servlets. Servlets work as our controller, so it receives the
+messages from the view, which will update the model or retrieve objects from the model
+respond back to the user. The controller will turn
+around and talk to the model by accessing other
+data objects or data access objects and doing
+create read update delete things to your data source perhaps doing some
+calculations things. What about our
+presentation tier, this becomes pretty
+important to us and obviously we want a great
+user experience thing. Well this tier
+consists of a set of abstractions designed to take user input and display results. Basically all of these can be used again in this
+course we're going to focus just on HTML for
+now but it could be JSP, it could have been a
+JavaScript Framework running of some kind. We could use XML
+we can use JavaFX, and a lot of other
+things that we could do here it simply is what is the user interacting with or
+being presented with. What about a Controller? What's our solution there. The role of the
+Controller tier is to isolate the presentation tier
+from the business logic, it's a traffic cop. I have my presentation, I have all the logic
+for that how to organize format and
+present data to a user in my presentation
+tier and then I have my business logic back
+in my model layer, how do I keep those two
+separate from each other so that I can vary
+them independently. When a cell phone
+request comes in I can say oh I need to
+build this for cell phones, oh my gosh now I
+need to build it for tablets my business
+logic hasn't changed so if I keep those two
+things separate and makes building them much nicer. It's a centralized
+class for handling all the requests and we're going to use
+a Servlet for that. It's an arbitration point between the view and
+the business logic or as I like to say
+it's a traffic cop, it just helps me direct the traffic incoming and then outputting to the
+presentation layer. A controller Servlet
+will provide one or more access points and it has the following
+responsibility, it gets in the request
+and then it delegates that request to an
+application controller class indirectly it will invoke one or more services
+that interact with the business tier dispatching
+the return value for the business tier will dictate a navigation mechanism for
+presentation and the view. In other words after my
+business logic is done, I've gone to the database, I've brought back some data, I've calculated and done some manipulation of
+that data and now I'm ready to say here presentation I want my
+user to see this view. The Servlet will help us have the mechanism for handing
+that back out to the view. What about our model
+or domain tier? The model or domain
+tier contains the business logic or data
+access implementation, so essentially it controls an
+applications functionality by doing all the work
+that detailed processing. It may be reaching out to
+the database or data source, bringing data back, it may be updating and
+editing that data, but it also may be
+doing calculations and other functionality
+that you would expect to see in a
+typical application, so it contains the body
+of business expertise.
