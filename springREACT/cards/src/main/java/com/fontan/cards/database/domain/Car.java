@@ -24,7 +24,7 @@ public class Car {
 	public Car() {}
 	
 	public Car(String brand, String model, String color, 
-			String registerNumber, int year, int price//Owner owner
+			String registerNumber, int year, int price,Owner owner
 			)
 	{
 		super();
@@ -34,21 +34,31 @@ public class Car {
 		this.registerNumber = registerNumber;
 		this.year = year;
 		this.price = price;
-//		this.owner = owner;
+		this.owner = owner;
 	}
 
-//	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name = "owner")
-//	private Owner owner;
-//
-//	//Getter  and  setter
-//	public Owner getOwner()  {
-//	    return owner;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "owner")
+	private Owner owner;
+
+//	@ManyToMany(mappedBy="cars")
+//	private Set<Owner> owners = new HashSet<Owner>();
+//	
+//	public Set<Owner> getOwners() {
+//		return owners;
 //	}
-//
-//	public void setOwner(Owner owner)  {
-//	    this.owner = owner;
+//	public void setOwners(Set<Owner> owners) {
+//		this.owners = owners;
 //	}
+	
+//	Getter  and  setter
+	public Owner getOwner()  {
+	    return owner;
+	}
+
+	public void setOwner(Owner owner)  {
+	    this.owner = owner;
+	}
 	
 	
 	public long getId() {
