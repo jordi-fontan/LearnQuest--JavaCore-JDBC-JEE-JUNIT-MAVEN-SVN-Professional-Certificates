@@ -1,0 +1,78 @@
+Okay, we're going to take
+a look at Web basics here. By the end of this lesson, you should be
+able to explain the fundamentals of HTTP understand the request response model
+used and, frankly, all web applications. But specifically be able to read and understand a lot of the request response
+headers related to JE E Web applications. And then we'll break down the Uniform
+Resource Locator, lso known as the URL, into four key parts so what is
+HTTP Ii's hypertext transfer protocol. It's been the protocol of the web since
+the 90s and earlier, so it uses a request response model it's a client in our case
+usually a Web browser sends a request. The Web application running on a server
+processes the request and sends it back as a response in our case, that will be
+done from the container and a survey. Originally, it was just used to
+serve up static content here's your static content back your core hard
+coded if you will html page over time, of course, the market demand grew for
+more dynamic content, and we wanted to see things began to move and
+happen on the screen for us. Right things like Wait, I want to see my weather i want to see
+my stock prices those things begin to, be very much in demand and we had to
+work to make that happen in HTTP. So there's a couple of things you
+should know about HTTP one it's simple, lightweight and stateless and the big
+thing to focus on there is that it's stateless and that has its consequences. Well,it runs on top of TCP and IP we don't
+really need to be concerned with that but the thing that we do really need
+to know is that it's stateless and we're going to have to deal with that. So we're going to have to decide,
+where do we hold state do we hold it on the client or the server so
+if you log into my website and I want to remember your name who's
+responsible for that, right. The client, the server, It's certainly
+not going to be HTTP because HTTP is stateless a request will come across in an
+HTTP and it will have a choice of methods. Now get and post are the most common, and
+there's that's what we're going to focus on there's certainly more that
+you can look up on your own. But if you get the get and post, you can
+sort of teach yourself from there pretty easily, and then in addition to the get or
+post in the request, the method, we can provide parameters of adding
+additional data to the server side. So here I'm submitting a form that
+I want to put my first name and last name, and I'm going to pass that data
+over to the server so it can have it. And I do that through
+parameters in my request and then a response is, in our case,
+often an HTML document but it can be other in Miami types such
+as PDFs and other things like that. So the HTTP request is a text based
+command it's sent to a specific U R L and it contains again an HTTP method to get
+is typically used to request the pages, and a post is typically used to
+supply data to the server side. So I might post up a form with data on it, and this request may contain
+request parameters again, parameters are used to provide additional
+data to the server for our processing. So let's take a look at an example
+of one so, as you can see from here, this is a get request you can see
+the resource that I'm requesting, and then you can see a little bit
+more about what's going on. You don't certainly don't have to memorize
+this or anything we're going to show you the pertinent things to pay
+attention to from a J G standpoint. One thing that's really nice,
+as I can see, my host is my local host and
+I'm requesting this on Ports 80 80 so I know that my in this case, my Tomcat
+server is listening on that port. So what does a post request look like
+well, very similar, but as you can see, it starts out with a post I'm still
+mentioning the resource that I want is a capital H home here. It's been mapped to some resource on my
+server, and we'll see how to do that later all right, this tells you a little bit
+more about the content type and so on. The local host is here again, and
+even the content length right well, what about a response how does
+an HTTP response work it's often a text based response in our case Html. It includes some status codes, some
+that you are very familiar with almost everybody knows a 44 not found
+you've seen that come up, and that's just a responses since back in
+the header from the server via HTTP. What you may not know is,
+every time you have a successful page, a two 100 is sent back, and
+occasionally you'll run into four ones and five hundreds of any kind
+means some server problem. And there are a lot more of these
+we just wanted you to get the basic idea it's beyond the scope
+of our class but if you'd like to do a Web search
+on HTTP response headers. You can certainly learn
+a lot more through there or take one, of course Eras Core Web
+application classes. So multiple response headers also include
+If we're going back and forth a few times, maybe a time stamp the length of the
+response what are you giving back to me? And cookies, which we'll learn about later
+in the course as well You're you're going to be an expert with cookies by the time
+you're finished with this course. So what does it get response Look like
+It's telling me I'm sending back HTTP and by the way, it's 200 so everything went
+okay I'm sending you back text Html. You can even see the timestamp there,
+the length and so on, and you can see the server This was served
+up by an Apache TomEE Server well, what about a response Very, very similar. It has HTTP and then the 200 and
+some of the other stuff we saw now, in this case, the response
+included an Html document, and we're going to learn how to do
+this from our surveillance. Right, so this was literally sent back
+from the server to the browser so that it could render this information back
