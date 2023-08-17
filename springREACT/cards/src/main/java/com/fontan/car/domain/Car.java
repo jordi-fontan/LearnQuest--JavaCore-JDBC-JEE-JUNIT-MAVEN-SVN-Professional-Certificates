@@ -1,4 +1,4 @@
-package com.fontan.cards.database.domain;
+package com.fontan.car.domain;
 
 
 

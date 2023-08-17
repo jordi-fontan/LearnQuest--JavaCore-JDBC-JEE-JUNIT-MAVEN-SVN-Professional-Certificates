@@ -1,4 +1,4 @@
-package com.fontan.cards;
+package com.fontan.car;
 
 import java.io.File;
 import java.util.Arrays;
@@ -11,15 +11,21 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.fontan.cards.database.domain.Car;
-import com.fontan.cards.database.domain.CarRepository;
-import com.fontan.cards.database.domain.Owner;
-import com.fontan.cards.database.domain.OwnerRepository;
+import com.fontan.car.domain.Car;
+import com.fontan.car.domain.CarRepository;
+import com.fontan.car.domain.Owner;
+import com.fontan.car.domain.OwnerRepository;
+import com.fontan.car.domain.UserApp;
+import com.fontan.car.domain.UserAppRepository;
 
 @SpringBootApplication
 public class CardsApplication implements CommandLineRunner{
 	
 	private static final org.slf4j.Logger logger= LoggerFactory.getLogger(CardsApplication.class);
+	
+	@Autowired
+	private UserAppRepository urepository;
+	
 	@Autowired
 	private CarRepository repository;
 	
@@ -48,6 +54,12 @@ public class CardsApplication implements CommandLineRunner{
 		repository.save(new Car("Nissan", "Leaf","White","SSJ-3002", 2019, 29000,owner2));
 		repository.save(new Car("Toyota", "Prius","Silver","KKO-0212", 2020, 39000,owner2));
 	
+		// Username: user, password: user
+		urepository.save(new UserApp("user",
+		"$2a$10$NVM0n8ElaRgg7zWO1CxUdei7vWoPg91Lz2aYavh9.f9q0e4bRadue","USER"));
+		// Username: admin, password: admin
+		urepository.save(new UserApp("admin",	"$2a$10$8cjz47bjbR4Mn8GMg9IZx.vyjhLXR/SKKMSZ9.mP9vpMu0ssKi8GW", "ADMIN"));
+		
 		for(Car car: repository.findAll()) {
 			logger.info("Found car " + car.getBrand() + " " +car.getModel() + " at database, owned by " +car.getOwner().toString());
 		}
